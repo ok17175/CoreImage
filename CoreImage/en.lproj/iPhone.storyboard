@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="9qR-xn-ZRP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Tj7-DU-hNB"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lqy-dW-NqJ">
+                                <connections>
+                                    <action selector="changeValue:" destination="2" eventType="valueChanged" id="1lV-z8-iSf"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51Y-eu-u7O">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Phote Album">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadPhoto:" destination="2" eventType="touchUpInside" id="rhR-aA-5IC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FW-W5-BDn">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save to Album">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePhoto:" destination="2" eventType="touchUpInside" id="5Kx-Cj-mA9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lqy-dW-NqJ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2Y0-Ty-wMt"/>
+                            <constraint firstItem="9qR-xn-ZRP" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="2jg-Az-Ohc"/>
+                            <constraint firstAttribute="trailing" secondItem="lqy-dW-NqJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8oa-ny-HX7"/>
+                            <constraint firstItem="51Y-eu-u7O" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="MgE-5C-F0Z"/>
+                            <constraint firstAttribute="bottom" secondItem="6FW-W5-BDn" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="QjT-SR-1SK"/>
+                            <constraint firstItem="9qR-xn-ZRP" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="VMi-ad-09I"/>
+                            <constraint firstAttribute="bottom" secondItem="51Y-eu-u7O" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="i4T-ax-0vk"/>
+                            <constraint firstItem="51Y-eu-u7O" firstAttribute="top" secondItem="lqy-dW-NqJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="q2j-HL-DwT"/>
+                            <constraint firstItem="9qR-xn-ZRP" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="t1h-Yk-T7o"/>
+                            <constraint firstAttribute="trailing" secondItem="6FW-W5-BDn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ug8-yj-Pff"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="9qR-xn-ZRP" id="Y80-mg-raU"/>
+                        <outlet property="slider" destination="lqy-dW-NqJ" id="kDE-5j-Aoc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changeValue:" candidateClass="UISlider"/>
+                <relationship kind="action" name="loadPhoto:" candidateClass="UIButton"/>
+                <relationship kind="action" name="savePhoto:"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
